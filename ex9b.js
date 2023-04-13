@@ -20,14 +20,30 @@ for (let i = 0; i < palabraDelDia.length; i++) {
   let siguienteLetraIntroducida = palabraIntroducida[i];
 
   // Tu código a partir de aquí, dentro del bucle
-  if (siguienteLetraCorrecta === palabraDelDia[i]) {
-    console.log(`la plabra ${siguienteLetraCorrecta} es correcta`);
-  } else if (siguienteLetraCorrecta === siguienteLetraIntroducida) {
-    `La letra ${siguienteLetraIntroducida} no es correcto`;
+  if (siguienteLetraIntroducida === siguienteLetraCorrecta) {
+    console.log(`La letra "${siguienteLetraIntroducida}" es correcta`);
+  } else if (palabraDelDia.indexOf(siguienteLetraIntroducida) !== -1) {
+    console.log(
+      `La letra "${siguienteLetraIntroducida}" es correcta pero no está bien posicionada`
+    );
   } else {
-    console.log("no es correcto");
+    console.log(`La letra "${siguienteLetraIntroducida}" no es correcta`);
   }
 }
+
+// for (let i = 0; i < palabraDelDia.length; i++) {
+//   let siguienteLetraCorrecta = palabraDelDia[i];
+//   let siguienteLetraIntroducida = palabraIntroducida[i];
+
+//   // Tu código a partir de aquí, dentro del bucle
+//   if (siguienteLetraIntroducida === siguienteLetraCorrecta) {
+//     console.log(`la plabra ${siguienteLetraCorrecta} es correcta`);
+//   } else if (palabraDelDia.indexOf(siguienteLetraIntroducida) !== -1) {
+//     `La letra ${siguienteLetraIntroducida} no es correcto`;
+//   } else {
+//     console.log("es correcto pero no esta bien posicionado");
+//   }
+// }
 
 // Resultado esperado:
 
